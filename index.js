@@ -1,4 +1,5 @@
 const inquirer = require('inquirer');
+const { Circle, Square, Triangle } = require('./lib/shapes')
 
 inquirer 
 .prompt ([{
@@ -9,20 +10,22 @@ inquirer
 },
 {
     type: 'input',
-    name: 'letter',
-    message: 'Enter up to three characters.',
-    choices: '/[A-Za-z]/'
+    name: 'text',
+    message: 'Enter up to three characters.'
 },
 {
     type: 'input',
-    name: 'shapeColor',
-    message: 'What color do you want in shape?',
-    choices: ''
+    name: 'color',
+    message: 'Enter a color keyword (OR a hexadecimal number) for shape.'
 },
 {
     type: 'input',
-    name: 'letterColor',
-    message: 'What color do you want for letter?',
-    color: ''
+    name: 'textColor',
+    message: 'Enter a color keyword (OR a hexadecimal number) for text.'
 }
 ])
+.then((data) => {
+fs.writeFile('./logo.svg', generateLogo(data), (err) => {
+    err? console.log('error') : console.log('sucess');
+})
+})
