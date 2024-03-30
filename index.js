@@ -3,7 +3,7 @@ const fs = require('fs');
 const generateLogo = require('./generate..logo.js');
 inquirer 
 .prompt ([{
-    type: 'checkbox',
+    type: 'list',
     name: 'shape',
     message: 'What shape of SVG do you want to create?',
     choices : ['Circle', 'Triangle', 'Square']
