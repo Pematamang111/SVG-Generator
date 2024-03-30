@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
-const { Circle, Square, Triangle } = require('./lib/shapes')
-
+const fs = require('fs');
+const generateLogo = require('./generate..logo.js');
 inquirer 
 .prompt ([{
     type: 'checkbox',
@@ -24,6 +24,7 @@ inquirer
     message: 'Enter a color keyword (OR a hexadecimal number) for text.'
 }
 ])
+
 .then((data) => {
 fs.writeFile('./logo.svg', generateLogo(data), (err) => {
     err? console.log('error') : console.log('sucess');
