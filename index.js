@@ -27,6 +27,6 @@ inquirer
 
 .then((data) => {
 fs.writeFile('./logo.svg', generateLogo(data), (err) => {
-    err? console.log('error') : console.log('sucess');
+    err? console.log('error') : console.log('success');
 })
 })
