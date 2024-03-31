@@ -2,7 +2,7 @@
 
 <rect x="50" y="65" width="150" height="150" fill="green"/>
 
-<text x="125" y="150" font-size="60" text-anchor="middle" fill="white">SVG</text>
+<text x="125" y="150" font-size="50" text-anchor="middle" fill="white">SVG</text>
 
 </svg>
 
