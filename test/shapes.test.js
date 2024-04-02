@@ -1,7 +1,6 @@
-const Shape = require('../lib/shapes.js');
-const { Circle, Square, Triangle } = require('../lib/shapes.js');
+const { Circle, Square, Triangle, Shape } = require('../lib/shapes.js');
 
-
+console.log(Shape);
 describe('Shapes', () =>{
     describe('instance', () => {
         it('Should be instance of Shapes', () => {
@@ -30,10 +29,7 @@ describe('Circle', () => {
             expect(circle.render()).toEqual(`<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
 
             <circle cx="150" cy="100" r="80" fill="${color}" />
-          
-            <text x="150" y="115" font-size="60" text-anchor="middle" fill="${this.textColor}">${this.text}</text>
-          
-          </svg>`);
+            <text x="150" y="115" font-size="60" text-anchor="middle" fill="${this.textColor}">${this.text}</text></svg>`);
         })
     })
 })
